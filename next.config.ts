@@ -1,12 +1,6 @@
 import type { NextConfig } from "next";
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    turbopack: {
-      root: '.',
-    },
-  },
-};
+const nextConfig: NextConfig = {};
 
 export default nextConfig;
