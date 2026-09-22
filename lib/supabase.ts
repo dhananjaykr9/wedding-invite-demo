@@ -2,18 +2,20 @@ import { createBrowserClient } from '@supabase/ssr'
 
 let _supabase: ReturnType<typeof createBrowserClient> | null = null
 
-export function getSupabase() {
+function getSupabase() {
   if (!_supabase) {
     _supabase = createBrowserClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL ?? '',
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? ''
+      process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co',
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key'
     )
   }
   return _supabase
 }
 
-// Keep backward-compatible named export for existing imports
-// This is safe because it's only used in "use client" components at runtime
-export const supabase = typeof window !== 'undefined'
-  ? getSupabase()
-  : (null as unknown as ReturnType<typeof createBrowserClient>)
+// Proxy object that lazily creates the Supabase client on first property access
+// This prevents createBrowserClient from being called during SSG/build
+export const supabase = new Proxy({} as ReturnType<typeof createBrowserClient>, {
+  get(_target, prop) {
+    return (getSupabase() as any)[prop]
+  },
+})
