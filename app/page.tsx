@@ -17,7 +17,7 @@ import GreenDay from "@/components/sections/03_GreenDay";
 import YellowDay from "@/components/sections/04_YellowDay";
 import TheJourney from "@/components/sections/05_TheJourney";
 import GrandFinale from "@/components/sections/06_GrandFinale";
-import PhotoShodh from "@/components/sections/07_PhotoShodh";
+// import PhotoShodh from "@/components/sections/07_PhotoShodh";
 import Blessings from "@/components/sections/08_Blessings";
 import RSVP from "@/components/sections/09_RSVP";
 import ChildInvitation from "@/components/sections/10_ChildInvitation";
@@ -113,9 +113,9 @@ export default function Home() {
 
 
 
-                <div className="max-w-6xl mx-auto w-full px-4">
+                {/* <div className="max-w-6xl mx-auto w-full px-4">
                   <PhotoShodh />
-                </div>
+                </div> */}
 
 
                 <div className="max-w-6xl mx-auto w-full px-4">
