@@ -39,7 +39,7 @@ const yantramanavFont = Yantramanav({
 export const metadata: Metadata = {
   title: SITE_CONFIG.title,
   description: SITE_CONFIG.description,
-  manifest: "/manifest.json",
+  manifest: "/manifest.webmanifest",
   icons: {
     // Adding ?v=1 forces the browser to bypass the cache and load the new file
     icon: [
