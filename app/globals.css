@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* ============================================================
+   TAILWIND v4 THEME TOKENS
+   These automatically become utility classes like bg-mauli-red
+   ============================================================ */
+@theme {
+  /* The Mauli Palette */
+  --color-mauli-red: #D94A4A;
+  --color-mauli-gold: #F2C94C;
+  --color-mauli-yellow: #F2994A;
+
+  /* The Wedding Event Palette */
+  --color-wedding-green: #2D5A27;
+  /* Mehendi */
+  --color-wedding-haldi: #FFD700;
+  /* Turmeric */
+  --color-wedding-royal: #1A237E;
+  /* Reception */
+  --color-wedding-maroon: #800000;
+  /* Shlokas/Names */
+  --color-wedding-paper: #FDFCF0;
+  /* Base Background */
+
+  /* Typography */
+  --font-sanskrit: var(--font-tiro), serif;
+  --font-marathi: var(--font-anek), serif;
+  --font-signature: var(--font-tillana), cursive;
+  --font-yantramanav: var(--font-yantramanav), sans-serif;
+}
+
+/* ============================================================
+   BASE CSS VARIABLES
+   ============================================================ */
+:root {
+  --background: #FDFCF0;
+  /* Matches --color-wedding-paper */
+  --foreground: #1A1A1A;
+}
+
+/* ============================================================
+   GLOBAL RESET & SMOOTHING
+   ============================================================ */
+html {
+  scroll-behavior: smooth;
+  /* Prevent font size jumping on mobile orientation change */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+
+  /* Fallback fonts while Sahitya loads */
+  font-family: var(--font-marathi), ui-serif, Georgia, serif;
+
+  width: 100%;
+  min-height: 100vh;
+
+  /* Critical for Mobile Chrome stability */
+  overflow-x: hidden;
+  position: relative;
+
+  /* Mobile optimization */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ============================================================
+   PREMIUM PAPER TEXTURE OVERLAY
+   Optimized for "gavaskarwedding.live" light hero image
+   ============================================================ */
+.texture-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Ensures clicks go through to your RSVP buttons/profiles */
+  pointer-events: none;
+
+  /* Sits just above the background but below your text/images */
+  z-index: 1;
+
+  /* Lowered opacity so it doesn't "dirty" your light hero photo */
+  opacity: 0.15;
+
+  /* 'multiply' makes the grains look like they are inside the paper */
+  mix-blend-mode: multiply;
+
+  /* SVG Noise Pattern */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+/* Ensure images and cards sit above the texture if needed */
+.z-above-texture {
+  position: relative;
+  z-index: 10;
+}

@@ -1,0 +1,145 @@
+// frontend/lib/constants.ts
+
+export const SITE_CONFIG = {
+  title: "Atul & Vaishnavi Wedding",
+  description: "The Wedding of Atul Gavaskar & Vaishnavi",
+  url: "https://reshimgaath.live",
+};
+
+// 1. The Spiritual Layer (Sanskrit Shlokas)
+export const SHLOKAS = {
+  ganesh: "॥ श्री गणेशाय नमः ॥",
+  couple_intro: "यत्र नार्यस्तु पूज्यन्ते रमन्ते तत्र देवताः।",
+  mehendi: "सर्वे भवन्तु सुखिनः",
+  haldi: "सर्वे सन्तु निरामयाः।",
+  journey: "शुभं करोति कल्याणं आरोग्यं धनसंपदा |",
+  muhurta: "धर्मे च अर्थे च कामे च मोक्षे च नातिचरामि।",
+  puja: "सत्यं शिवं सुन्दरम्।",
+  reception: {
+    line1: "आयुष्मान् भव।",
+    line2: "सौभाग्यवती भव।"
+  },
+  footer: "॥ मंगलम भगवान् विष्णुः ॥"
+};
+
+// 2. The Couple (Bio & Details)
+export const COUPLE = {
+  groom: {
+    id: "atul",
+    name: "अतुल",
+    fullName: "Atul Gavaskar",
+    bio_header: "नवरदेव",
+    education: "BA(Eng), MA(Eng), SET, PhD", 
+    work: " Assistant Professor, PGTD Of English, Gondwana University, Gadchiroli", 
+    trait: "शांत आणि संयमी (Calm & Composed)",
+    journey_title: "प्रवास आतापर्यंत (The Journey So Far)"
+  },
+  bride: {
+    id: "vaishnavi",
+    name: "वैष्णवी",
+    fullName: "Vaishnavi Kale",
+    bio_header: "नवरी",
+    education: "B.Sc, M.Sc(Chem)",
+    work: "Executive at HDFC Bank, Chandrapur",
+    trait: "आनंदी आणि उत्साही (Joyful & Energetic)",
+    journey_title: "प्रवास आतापर्यंत (The Journey So Far)"
+  }
+};
+
+// 3. The Timeline (Events & Dress Codes)
+export const TIMELINE = [
+  {
+    id: "day1",
+    date: "२३ फेब्रुवारी २०२६ (सोमवार)",
+    theme_color: "var(--color-wedding-green)",
+    events: [
+      {
+        time: "11.00 AM - 12.30 PM",
+        title: "डायका कार्यक्रम",
+        icon: "pot"
+      },
+      {
+        time: "1.00 PM - 5.00 PM",
+        title: "मेहंदी कार्यक्रम 🌿",
+        dress_code: {
+          men: "मेहंदी शर्ट / कुर्ता",
+          women: "मेहंदी साडी / ड्रेस"
+        }
+      },
+      {
+        time: "8.00 PM - 11.00 PM",
+        title: "संगीत कार्यक्रम 🎶",
+        note: "टीप - सर्वांचा सहभाग आनंदाचा ठरेल."
+      }
+    ]
+  },
+  {
+    id: "day2",
+    date: "२४ फेब्रुवारी २०२६ (मंगळवार)",
+    theme_color: "var(--color-wedding-haldi)",
+    events: [
+      {
+        time: "11.00 AM - 1.00 PM",
+        title: "हळदी पूजा",
+        dress_code: { women: "उलटा पल्लू साडी" }
+      },
+      {
+        time: "3.00 PM - 10.00 PM",
+        title: "हळदी कार्यक्रम व DJ 🎧",
+        dress_code: {
+          men: "प्रिंटेड पिवळा कुर्ता",
+          women: "नऊवारी साडी"
+        }
+      }
+    ]
+  },
+  {
+    id: "day3",
+    date: "२५ फेब्रुवारी २०२६ (बुधवार)",
+    theme_color: "gray",
+    events: [
+      {
+        time: "06.00 AM",
+        title: "वरात प्रस्थान 🚌",
+        desc: "नवरदेव (वरात) सकाळी ६.०० वाजता चंद्रपूर साठी निघेल."
+      }
+    ]
+  },
+  {
+    id: "day4",
+    date: "२६ फेब्रुवारी २०२६ (गुरुवार)",
+    theme_color: "var(--color-wedding-royal)",
+    events: [
+      {
+        time: "08.00 AM",
+        title: "फोम पार्टी व DJ (Celebration)",
+        dress_code: { men: "प्रिंटेड शर्ट", women: "प्रिंटेड ड्रेस" }
+      },
+      {
+        time: "11.00 AM",
+        title: "श्री सत्यनारायण महापूजा 🙏",
+        dress_code: { women: "पैठणी साडी" }
+      },
+      {
+        time: "06.30 PM",
+        title: "रिसेप्शन 🎉",
+        location: "नक्षत्र लॉन, हिंगणघाट",
+        map_link: "https://maps.app.goo.gl/FjRe1v8vFpXrRJxD8"
+      }
+    ]
+  }
+];
+
+// 4. Developer Info
+export const DEVELOPER = {
+  name: "Dhananjay Kharkar",
+  relation: "Putnya (Nephew)",
+  role: "Chief Tech & Family Engineer",
+  modal_title: "हे डिजिटल आमंत्रण नवरदेवाच्या पुतण्याने प्रेमाने तयार केले आहे...",
+  modal_text: "काकांच्या लग्नासाठी बनवलेली ही एक छोटीशी डिजिटल भेट. तंत्रज्ञान आणि नात्यांची ही एक सांगड!",
+  links: {
+    linkedin: "https://www.linkedin.com/in/dhananjaykharkar/",
+    instagram: "https://instagram.com/dhanno.9",
+    github: "https://github.com/dhananjaykr9"
+  }
+};
