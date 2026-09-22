@@ -118,20 +118,6 @@ export default function DeveloperInfo() {
             </motion.button>
           </motion.div>
 
-          {/* ADMIN PAGE BUTTON */}
-          <div className="mt-20">
-            <Link href="/admin">
-              <motion.button
-                whileHover={{ scale: 1.05, backgroundColor: "#000" }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-full font-black uppercase tracking-[0.3em] text-[9px] shadow-2xl transition-all"
-                suppressHydrationWarning
-              >
-                <ShieldCheck size={14} className="text-mauli-gold" />
-                Admin Terminal
-              </motion.button>
-            </Link>
-          </div>
         </div>
       </footer>
 
